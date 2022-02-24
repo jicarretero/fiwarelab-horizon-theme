@@ -1,0 +1,27 @@
+@import "/horizon/lib/bootstrap_scss/scss/bootstrap/mixins/vendor-prefixes";
+
+@import 'components/_context_selection';
+@import 'components/sidebar';
+@import 'components/pie_charts';
+
+.navbar-brand {
+
+  // The 114 is a legacy value to push the context-menu over
+  padding-right: 114px;
+}
+
+//jicg -- 
+.openstack-spin.list-group-item.openstack-panel.active {
+//   background: #f9f9f9;
+   color: $light-blue-fiware;
+}
+.openstack-spin.list-group-item.openstack-panel:hover {
+   background: $brand-primary;
+   color: $white;
+}
+
+//3l + jicg
+.nav-pills.nav-stacked {
+//    background-color: #f9f9f9;
+}
+

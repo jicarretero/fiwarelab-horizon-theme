@@ -1,0 +1,21 @@
+/*  Hay algo de esto por ahi? */
+@font-face {
+  font-family: "NeoTechRegular";
+  font-style: normal;
+  src: url('neotechstd/neotechstd-regular.eot');
+    src: url('../fonts/neotechstd-regular.eot') format('embedded-opentype'),
+         url('../fonts/neotechstd-regular.woff') format('woff'),
+         url('../fonts/neotechstd-regular.ttf') format('truetype'),
+         url('../fonts/neotechstd-regular.svg#NeoTechStdMedium') format('svg');
+}
+
+
+@font-face {
+  font-family: "NeoTechMedium";
+  font-style: normal;
+  src: url('../fonts/neotechstd-medium.eot');
+    src: url('../fonts/neotechstd-medium.eot') format('embedded-opentype'),
+         url('../fonts/neotechstd-medium.woff') format('woff'),
+         url('../fonts/neotechstd-medium.ttf') format('truetype'),
+         url('../fonts/neotechstd-medium.svg#NeoTechStdMedium') format('svg');
+}

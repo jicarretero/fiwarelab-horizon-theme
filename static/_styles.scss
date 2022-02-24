@@ -1,0 +1,309 @@
+@import "bootstrap/styles";
+@import "horizon/styles";
+
+@import "fonts/_neotech-fontface.scss";
+
+/* Ubuntu styles */
+body,
+.page-header {
+  // -- jicg ---  font-family: Ubuntu, Arial, "libra sans", sans-serif;
+  font-family: NeoTechRegular, Arial, "libra sans", sans-serif;
+  // -- jicg -- font-weight: 300;
+  // font-family: NeoTechRegular;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+h1 {
+  color: $brand-primary; 
+}
+h2 {
+  color: $light-blue-fiware;
+}
+h3 {
+  color: $light-blue-fiware;
+}
+h4 {
+  color: $light-blue-fiware;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a,
+a:link,
+a:visited {
+  // color: $brand-color;
+  color: $black-letters;
+}
+
+.row {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+table {
+  background-color: $table-bg;
+  border: 1px solid #ddd;
+}
+
+.table_actions {
+  margin-bottom: 10px;
+}
+
+.topbar,
+.topbar .switcher_bar .btn.btn-topnav,
+.navbar-default {
+  background: $brand-color;
+}
+
+.navbar-default .navbar-nav > li > a {
+  border-color: $brand-color;
+  /* jicg - color: $white !important;*/
+  color: $black-letters !important;
+
+  &:hover,
+  &:focus {
+    border-color: $topbar-link-hover;
+    background: $topbar-link-hover;
+    color: $white;
+  }
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: $topbar-link-hover;
+  color: $white;
+}
+
+.navbar-brand {
+  /* background-image: url("/static/themes/ubuntu/img/logo-ubuntu-white.svg"); */
+  background-image: url("/static/themes/fiwarelab-horizon-theme/img/logo-fiware-after-login.png");
+  background-position: 20px 4px;
+  background-repeat: no-repeat;
+  background-size: 110px;
+
+  img {
+    opacity: 0;
+  }
+}
+
+.nav_accordion dt li a.active,
+.nav_accordion dd li a.active {
+  border-left: 4px solid $brand-primary;
+  color: $brand-color;
+  // color: $brand-primary;
+}
+
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+.navbar .dropdown-menu:before {
+  display: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: $nav-active-color;
+
+  &:hover {
+    background-color: $nav-hover-color;
+  }
+}
+
+.d3_pie_chart_usage .arc.inner {
+  fill: $brand-color;
+}
+
+.container-fluid {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background: $white;
+}
+
+.fa.hz-icon-required {
+  color: $brand-color;
+}
+
+.context-selection > li > ul > li > a > .fa.fa-check {
+  left: 0.5em;
+  padding: 0;
+}
+
+.form-group label {
+  margin-right: 5px;
+}
+
+/* Login splash screen */
+#splash {
+  background: url("/static/themes/fiwarelab-horizon-theme/img/image-background-pattern.png");
+  position: absolute;
+  width: 100vw;
+
+  .login {
+    background-color: $white;
+    box-shadow: 0px 1px 3px 1px rgba(51,51,51,0.2);
+    -moz-box-shadow: 0px 1px 3px 1px rgba(51,51,51,0.2);
+    -webkit-box-shadow: 0px 1px 3px 1px rgba(51,51,51,0.2);
+    max-width: 500px;
+    padding-bottom: 20px;
+    padding-top: 60px;
+    position: relative;
+
+    .splash-logo {
+      display: none;
+    }
+
+    &:after {
+      background-image: url("/static/themes/fiwarelab-horizon-theme/img/fiware-logo-splash.png");
+      background-repeat: no-repeat;
+      background-size: 110px;
+      color: $black-letters;
+      background-color: $white;
+      content: "FIWARE Lab";
+      display: block;
+      font-size: 21px;
+      left: 20px;
+      line-height: 1.7em;
+      position: absolute;
+      text-indent: 135px;
+      top: 25px;
+      width: 95%;
+    }
+
+    .horizontal-center {
+      margin: 0;
+      width: auto;
+    }
+  }
+}
+
+/* Sidebar panel */
+a.list-group-item:hover,
+a.list-group-item:focus,
+button.list-group-item:hover,
+button.list-group-item:focus,
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  color: #888;
+  background-color: $light-grey;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  font-weight: bold;
+}
+
+.btn-default {
+	font-size: 13px;
+}
+/* Buttons (btn) */
+.btn-primary {
+  /* jicg - background-color: $brand-color; */
+  background-color: $brand-primary;
+  border-color: darken($brand-color, 5%);
+  color: $white !important;
+  margin-right: 5px;
+  font-size: 13px;
+
+  &.pull-right {
+    margin-right: 0;
+  }
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .btn-primary.dropdown-toggle {
+  background-color: lighten($brand-primary, 10%); //jicg -- 5% to 10% ; changed brand-primary
+  border-color: $brand-color;
+}
+
+.btn-primary.disabled {
+  background-color: #efefef;
+  border: 1px solid #efefef;
+}
+
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary.focus {
+  //jicg -- background: $brand-color;
+  background: $black-letters;
+  color: $white;
+  cursor: not-allowed;
+  opacity: .3;
+}
+
+/* btn-danger overrides */
+.dropdown-menu > li > .btn.btn-danger {
+  color: $brand-danger;
+  background-color: $white;
+}
+
+.btn-danger, a.btn-danger, a.btn-danger:link, a.btn-danger:visited {
+  color: $white;
+  background-color: $brand-danger;
+  border-color: darken($brand-danger, 5%);
+  font-size: 13px;
+}
+
+a.btn-danger:hover {
+  background-color: darken($brand-danger, 5%);
+}
+
+/* Loading spinner */
+.modal-body p {
+  margin: 0 0 9px;
+}
+
+/* jicg ... */
+.footer {
+  position: absolute;
+  height: 20px;
+  bottom: 0px;
+  /*border-top: 1px solid #eeeeee;*/
+  padding-top: 10px;
+}
+
+.footer-main {
+        position: fixed;
+        background-color: white;
+        bottom: 0;
+        width: 100%;
+        height: 48px;
+        font-size: 12px;
+        border-top: 1px solid #48b9c9;  //green line
+        left: 0;
+        right: 0;
+        .container-fluid {
+            border-top: 1px solid #F2E826; //yellow line
+            border-bottom: 1px solid #193B6B; //black line
+            height: 0px;
+            .footer-content .cred {
+                    padding-top: 12px;
+                    padding-bottom: 8px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+        }
+        a {
+            text-decoration: underline;
+        }
+}
+
+.table-title {
+    color: $light-blue-fiware;
+}
+

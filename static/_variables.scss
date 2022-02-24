@@ -1,0 +1,30 @@
+@import "bootstrap/variables";
+@import "horizon/variables";
+@import "/horizon/lib/font_awesome/scss/variables";
+
+/* Custom Variables */
+$font-size-base: 16px;
+$brand-color: #eeeeee;
+$topbar-link-hover: #d5d5d5;
+$white: #fff; 
+$black-letters: #333333;
+$light-grey: #f7f7f7;
+
+/* $brand-primary: $brand-color; */
+$brand-primary: #193b6b;
+
+$nav-active-color: #b83a10;
+$nav-hover-color: #e1662f;
+
+$table-bg: #efefef;
+$red: #ff0000;
+
+$light-blue-fiware: #48B9C9;
+
+// jicg....
+$border-color:                  #A9A9A9;
+$table-border-color:    $border-color;
+$table-bg-hover:                #f5f5f5;
+$table-bg-odd:                  #f9f9f9;
+
+
