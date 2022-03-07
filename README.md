@@ -91,6 +91,18 @@ And setup WEBROOT, so we can access the cloud portal using */* instead of */hori
 
     WEBROOT='/'
     
+ Finally, in order to keep things as they were in previous versions and thinking about the available space for volumes in the nodes, I'd recommend updating the configuration parameter LAUNCH_INSTANCE_DEFAULTS in order to prevent creating a volume per every new VM by default:
+ 
+     LAUNCH_INSTANCE_DEFAULTS = {
+     #    'config_drive': False,
+     #    'enable_scheduler_hints': True,
+     #    'disable_image': False,
+     #    'disable_instance_snapshot': False,
+     #    'disable_volume': False,
+     #    'disable_volume_snapshot': False,
+      'create_volume': False,
+     }
+
 ## Installing the theme
 To install the theme we have to clone the repo to **/usr/share/openstack-dashboard/openstack_dashboard/themes** -- The next steps are done using the root account:
 
