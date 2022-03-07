@@ -1,18 +1,20 @@
 # fiwarelab-horizon-theme
 
-This theme of Cloud Portal is based on Ubuntu theme for Openstack-dashboard. Version of Openstack dashboard should be Queens
-and Ubuntu Version should be 18.04 --
+This theme of Cloud Portal is based on Ubuntu theme for Openstack-dashboard. Version of Openstack dashboard should be Rocky
+and Ubuntu Version should be 18.04 -- There are no big changes from this version to the previous one, representing Queens.
 
 ## Installation
 After installing Ubuntu 18.04, we only need to run
 
+    sudo apt update && sudo apt install -y software-properties-common
+    sudo add-apt-repository cloud-archive:rocky
     apt update && apt dist-upgrade -y
     sudo apt install openstack-dashboard git
 
 
 ## System configurations
 ### Changes on system
-I'd add in file **/etc/hosts** a couple of lines in order to  acceletate searchs in DNSs etc, I would add:
+I'd add in file **/etc/hosts** a couple of lines in order to  acceletate searchs in DNSs. So, I would add:
 
      10.0.3.145   keystone
      10.0.3.145   cloud.lab.fiware.org
@@ -20,24 +22,23 @@ I'd add in file **/etc/hosts** a couple of lines in order to  acceletate searchs
 ### Apache configurations
 I need to do som configurations in Apache so it can properly work. First, I need to set up on file **/etc/apache2/conf-available/openstack-dashboard.conf **-- The end version should be something like this:
 
-    WSGIScriptAlias /horizon /usr/share/openstack-dashboard/openstack_dashboard/wsgi/django.wsgi process-group=horizon
-    WSGIScriptAlias /       /usr/share/openstack-dashboard/openstack_dashboard/wsgi/django.wsgi process-group=horizon
+    WSGIScriptAlias /horizon /usr/share/openstack-dashboard/openstack_dashboard/wsgi.py process-group=horizon
+    WSGIScriptAlias /        /usr/share/openstack-dashboard/openstack_dashboard/wsgi.py process-group=horizon
     WSGIDaemonProcess horizon user=horizon group=horizon processes=3 threads=10 display-name=%{GROUP}
     WSGIProcessGroup horizon
     WSGIApplicationGroup %{GLOBAL}
     WSGIScriptReloading  On
     WSGIPassAuthorization On
     
-    
     Alias /static /var/lib/openstack-dashboard/static/
     Alias /horizon/static /var/lib/openstack-dashboard/static/
     
-    <Directory /usr/share/openstack-dashboard/openstack_dashboard/wsgi>
-       Require all granted
+    <Directory /usr/share/openstack-dashboard/openstack_dashboard>
+        Require all granted
     </Directory>
-     
+    
     <Directory /var/lib/openstack-dashboard/static>
-       Require all granted
+        Require all granted
     </Directory>
     
  Another file I should modify is the Apache configuration of the VirtualHosts. The file should be in /etc/apache2/:
