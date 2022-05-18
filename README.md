@@ -107,7 +107,11 @@ And setup WEBROOT, so we can access the cloud portal using */* instead of */hori
 To install the theme we have to clone the repo to **/usr/share/openstack-dashboard/openstack_dashboard/themes** -- The next steps are done using the root account:
 
         git clone https://github.com/jicarretero/fiwarelab-horizon-theme.git /usr/share/openstack-dashboard/openstack_dashboard/themes/fiwarelab-horizon-theme
-    
+
+Before following the next steps, if you want to deploy a local FIWARE Theme which is not related to federated FIWARE Lab nodes, you should edit the file 
+** /usr/share/openstack-dashboard/openstack_dashboard/themes/fiwarelab-horizon-theme/templates/auth/_login_form.html ** and remove the buttons on lines 81..83, 
+describing "Create Account" and "Request community account"
+
 Collect static info:
     
         python /usr/share/openstack-dashboard/manage.py collectstatic
