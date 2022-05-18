@@ -108,10 +108,12 @@ To install the theme we have to clone the repo to **/usr/share/openstack-dashboa
 
         git clone https://github.com/jicarretero/fiwarelab-horizon-theme.git /usr/share/openstack-dashboard/openstack_dashboard/themes/fiwarelab-horizon-theme
 
+##### Caveat for non FIWARE Lab Deployments:
 Before following the next steps, if you want to deploy a local FIWARE Theme which is not related to federated FIWARE Lab nodes, you should edit the file 
-** /usr/share/openstack-dashboard/openstack_dashboard/themes/fiwarelab-horizon-theme/templates/auth/_login_form.html ** and remove the buttons on lines 81..83, 
+**/usr/share/openstack-dashboard/openstack_dashboard/themes/fiwarelab-horizon-theme/templates/auth/_login_form.html** and remove the buttons, this means removing lines 81 to 83, 
 describing "Create Account" and "Request community account"
 
+##### End of Caveat for non FIWARE Lab Deployments
 Collect static info:
     
         python /usr/share/openstack-dashboard/manage.py collectstatic
