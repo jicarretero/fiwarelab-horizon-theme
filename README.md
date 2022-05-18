@@ -1,13 +1,13 @@
 # fiwarelab-horizon-theme
 
-This theme of Cloud Portal is based on Ubuntu theme for Openstack-dashboard. Version of Openstack dashboard should be Rocky
-and Ubuntu Version should be 18.04 -- There are no big changes from this version to the previous one, representing Queens.
+This theme of Cloud Portal is based on Ubuntu theme for Openstack-dashboard. Version of Openstack dashboard should be Stein
+and Ubuntu Version should be 18.04 -- There are no big changes from this version to the previous ones, representing Queens and Rocky.
 
 ## Installation
 After installing Ubuntu 18.04, we only need to run
 
     sudo apt update && sudo apt install -y software-properties-common
-    sudo add-apt-repository cloud-archive:rocky
+    sudo add-apt-repository cloud-archive:stein
     apt update && apt dist-upgrade -y
     sudo apt install openstack-dashboard git
 
